@@ -1,0 +1,36 @@
+1
+2
+3
+4
+5
+file used for temp probe: /sys/bus/w1/devices/28-0416362bc6ff/w1_slave
+fermenting temperature: 21.25
+ID of the device: 00000000dbc26990
+valve opening
+valve closed
+valve closing
+valve closed
+file used for temp probe: /sys/bus/w1/devices/28-0416362bc6ff/w1_slave
+fermenting temperature: 21.25
+ID of the device: 00000000dbc26990
+valve opening
+valve closed
+valve closing
+2016-09-27 00:55:35,542 root         DEBUG    1
+2016-09-27 00:55:35,578 root         INFO     2
+2016-09-27 00:55:35,599 root         WARNING  3
+2016-09-27 00:55:35,657 root         ERROR    4
+2016-09-27 00:55:35,678 root         CRITICAL 5
+2016-09-27 00:55:35,764 root         DEBUG    file used for temp probe: /sys/bus/w1/devices/28-0416362bc6ff/w1_slave
+2016-09-27 00:55:36,609 root         INFO     fermenting temperature: 21.25
+2016-09-27 00:55:36,630 root         INFO     ID of the device: 00000000dbc26990
+2016-09-27 00:55:36,652 root         DEBUG    valve opening
+2016-09-27 00:55:40,719 root         DEBUG    valve closed
+2016-09-27 00:55:40,741 root         DEBUG    valve closing
+2016-09-27 00:55:44,794 root         DEBUG    valve closed
+2016-09-27 00:55:44,829 root         DEBUG    file used for temp probe: /sys/bus/w1/devices/28-0416362bc6ff/w1_slave
+2016-09-27 00:55:45,749 root         INFO     fermenting temperature: 21.25
+2016-09-27 00:55:45,769 root         INFO     ID of the device: 00000000dbc26990
+2016-09-27 00:55:45,790 root         DEBUG    valve opening
+2016-09-27 00:55:49,841 root         DEBUG    valve closed
+2016-09-27 00:55:49,883 root         DEBUG    valve closing
