@@ -34,3 +34,12 @@ valve closing
 2016-09-27 00:55:45,790 root         DEBUG    valve opening
 2016-09-27 00:55:49,841 root         DEBUG    valve closed
 2016-09-27 00:55:49,883 root         DEBUG    valve closing
+2016-09-27 03:50:37,611 root         DEBUG    1
+2016-09-27 03:50:37,628 root         INFO     2
+2016-09-27 03:50:37,638 root         WARNING  3
+2016-09-27 03:50:37,647 root         ERROR    4
+2016-09-27 03:50:37,657 root         CRITICAL 5
+2016-09-27 03:50:37,667 root         DEBUG    file used for temp probe: /sys/bus/w1/devices/28-0416362bc6ff/w1_slave
+2016-09-27 03:50:38,508 root         INFO     fermenting temperature: 21.187
+2016-09-27 03:50:38,518 root         INFO     ID of the device: 00000000dbc26990
+2016-09-27 03:50:38,529 root         DEBUG    valve opening
