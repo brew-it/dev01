@@ -4,10 +4,6 @@ import robot.valves
 import robot.device_info
 import logging.config
 
-
-
-
-
 def main():
     import logging.config
     logging.config.fileConfig('logging.conf')
@@ -25,7 +21,6 @@ if __name__ == '__main__':
 
 ##############################
 ## debut du programme initial
-##
 ##
 ##############################
 robot.relay.setup_relays()
