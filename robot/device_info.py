@@ -1,5 +1,7 @@
 import re
 import os
+import data.config
+
 import logging
 logger = logging.getLogger(__name__)
 
@@ -41,3 +43,12 @@ def GetDeviceID():
 
     logging.info ("ID of the device: " + str(cpuserial));
     return cpuserial
+
+
+def GetBatchId():
+    try:
+        cur_batchid= data.config.GetConfig('batchinfo','batchid')
+        return cur_batchid
+    except:
+        return "-1"
+

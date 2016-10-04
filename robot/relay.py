@@ -1,9 +1,10 @@
 import RPi.GPIO as GPIO
 import logging
+import time
 logger = logging.getLogger(__name__)
 
 
-DELAY_CLOSING_THREEWAYVALVE = 4
+DELAY_CLOSING_THREEWAYVALVE = 8
 RELAY1 = 17;
 RELAY2 = 10;
 RELAY3 = 9;
@@ -27,14 +28,12 @@ relays18 = [RELAY1, RELAY2, RELAY3, RELAY4, RELAY5, RELAY6, RELAY7, RELAY8];
 relays916 = [RELAY9, RELAY10, RELAY11, RELAY12, RELAY13, RELAY14, RELAY15, RELAY16];
 
 
-
-
 def test_relay():
     time = 10;
     while i     < 1000:
         for relay in relays:
             GPIO.output(relay,GPIO.HIGH)
-        sleep(time)
+        time.sleep(time)
         logger.debug('open')
 
 
