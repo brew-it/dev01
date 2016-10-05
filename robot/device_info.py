@@ -8,26 +8,31 @@ logger = logging.getLogger(__name__)
 
 
 def GetTempProbeFilename():
-    for filename in os.listdir('/sys/bus/w1/devices/'):
-        if re.match('28-*', filename):
-            return filename
-       
-    return "PROBENOTFOUND"
+    try:
+        for filename in os.listdir('/sys/bus/w1/devices/'):
+            if re.match('28-*', filename):
+                return filename
+    except IOError:
+            raise IOError
 
 
 def GetFermenterTemperature():
-    probe_filename = "/sys/bus/w1/devices/" + GetTempProbeFilename() + "/w1_slave"
-    logging.debug("file used for temp probe: " + probe_filename)
+    logging.debug("entering GetFermenterTemperature function")
+    try:
+        probe_filename = "/sys/bus/w1/devices/" + GetTempProbeFilename() + "/w1_slave"
+        logging.debug("file used for temp probe: " + probe_filename)
 
-    probe_file = open(probe_filename)
-    thetext = probe_file.read()
-    probe_file.close()
-    tempdata = thetext.split("\n")[1].split(" ")[9]
-    temperature = float(tempdata[2:])
-    temperature = temperature / 1000
-    logging.info ("fermenting temperature: " + str(temperature));
+        probe_file = open(probe_filename)
+        thetext = probe_file.read()
+        probe_file.close()
+        tempdata = thetext.split("\n")[1].split(" ")[9]
+        temperature = float(tempdata[2:])
+        temperature = temperature / 1000
+        logging.info ("fermenting temperature: " + str(temperature));
+        return temperature
 
-    return temperature
+    except:
+        return -1
 
 def GetDeviceID():
     # Extract serial from cpuinfo file

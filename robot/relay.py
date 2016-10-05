@@ -34,13 +34,13 @@ def test_relay():
         for relay in relays:
             GPIO.output(relay,GPIO.HIGH)
         time.sleep(time)
-        logger.debug('open')
+        logging.debug('open')
 
 
         for relay in relays:
             GPIO.output(relay,GPIO.LOW)
         sleep(time/2)
-        logger.debug('closed')
+        logging.debug('closed')
 
 
 def cleanup_relays():    
